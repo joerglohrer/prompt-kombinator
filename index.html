@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Kombinator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        select {
+            margin: 10px 0;
+            padding: 5px;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Prompt Kombinator</h2>
+
+<label for="role">Wähle eine Rolle:</label>
+<select id="role"></select>
+
+<label for="task">Wähle eine Aufgabe:</label>
+<select id="task"></select>
+
+<label for="format">Wähle ein Format:</label>
+<select id="format"></select>
+
+<label for="adjustment">Wähle eine Anpassung:</label>
+<select id="adjustment"></select>
+
+<br><br>
+<button onclick="generatePrompt()">Prompt generieren</button>
+
+<div id="output">
+    <strong>Generierter Prompt:</strong>
+    <p id="promptText"></p>
+    <button onclick="copyPrompt()">Prompt kopieren</button>
+</div>
+
+<script>
+// Funktion, um die JSON-Daten zu laden
+function loadOptions() {
+    fetch('data.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            populateDropdown('role', data.roles);
+            populateDropdown('task', data.tasks);
+            populateDropdown('format', data.formats);
+            populateDropdown('adjustment', data.adjustments);
+        })
+        .catch(error => {
+            console.error('Error loading JSON:', error);
+            alert('Ein Fehler ist beim Laden der JSON-Daten aufgetreten. Überprüfe die Konsolenprotokolle für mehr Informationen.');
+        });
+}
+
+// Funktion, um die Dropdown-Optionen zu füllen
+function populateDropdown(id, options) {
+    let dropdown = document.getElementById(id);
+    dropdown.innerHTML = '';  // Dropdown leeren
+    options.forEach(option => {
+        let opt = document.createElement('option');
+        opt.value = option;
+        opt.innerHTML = option;
+        dropdown.appendChild(opt);
+    });
+}
+
+// Funktion zur Generierung des Prompts
+function generatePrompt() {
+    let role = document.getElementById('role').value;
+    let task = document.getElementById('task').value;
+    let format = document.getElementById('format').value;
+    let adjustment = document.getElementById('adjustment').value;
+
+    let promptText = `Antworte so, als wärst du ein*e ${role}: ${task} und zeige das Ergebnis als ${format}. ${adjustment}.`;
+
+    document.getElementById('promptText').textContent = promptText;
+}
+
+// Funktion zum Kopieren des Prompts
+function copyPrompt() {
+    let promptText = document.getElementById('promptText').textContent;
+    navigator.clipboard.writeText(promptText).then(function() {
+        alert("Prompt wurde kopiert!");
+    }, function() {
+        alert("Fehler beim Kopieren des Prompts.");
+    });
+}
+
+// Lade die Optionen beim Laden der Seite
+window.onload = loadOptions;
+</script>
+
+</body>
+</html>
