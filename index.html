@@ -30,6 +30,27 @@
         button:hover {
             background-color: #45a049;
         }
+        .repo-btn {
+            margin-top: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        .repo-btn:hover {
+            background-color: #555;
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        footer a {
+            color: #666;
+        }
     </style>
 </head>
 <body>
@@ -56,6 +77,14 @@
     <p id="promptText"></p>
     <button onclick="copyPrompt()">Prompt kopieren</button>
 </div>
+
+<!-- Button zum GitHub-Repository -->
+<a class="repo-btn" href="https://github.com/username/repo-name" target="_blank">Zum GitHub-Repository</a>
+
+<!-- Footer mit Lizenz -->
+<footer>
+    <p>Dieses Projekt steht unter der <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal (Public Domain Dedication)</a> Lizenz.</p>
+</footer>
 
 <script>
 // Funktion, um die JSON-Daten zu laden
