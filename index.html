@@ -127,7 +127,7 @@ function generatePrompt() {
     let format = document.getElementById('format').value;
     let adjustment = document.getElementById('adjustment').value;
 
-    let promptText = `Antworte so, als wärst du ein*e ${role}: ${task} und zeige das Ergebnis als ${format}. ${adjustment}.`;
+    let promptText = `Antworte so, als wärst du ein*e ${role}. Deine Aufgabe: ${task}. Zeige das Ergebnis als ${format}. ${adjustment}.`;
 
     document.getElementById('promptText').textContent = promptText;
 }
