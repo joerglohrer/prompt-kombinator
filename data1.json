@@ -1,0 +1,44 @@
+{
+  "roles": [
+    "Religionslehrer",
+    "Theologe"
+  ],
+  "targets": [
+    "Kinder",
+    "Jugendliche",
+    "Erwachsene"
+  ],
+  "tasks": [
+    {
+      "name": "Erkläre die Bedeutung des Abendmahls.",
+      "criteria": [
+        "Muss Bezug auf die biblische Überlieferung nehmen",
+        "Beispiele aus der Praxis integrieren",
+        "Interaktive Methoden einbeziehen"
+      ],
+      "examples": [
+        "Das Abendmahl symbolisiert Gemeinschaft und Vergebung.",
+        "Vergleich von christlichen und jüdischen Festen."
+      ]
+    },
+    {
+      "name": "Vergleiche religiöse Feiertage im Christentum und Islam.",
+      "criteria": [
+        "Muss die wichtigsten religiösen Feiertage in beiden Religionen benennen",
+        "Verbindung zwischen religiösem Inhalt und kultureller Praxis herstellen"
+      ],
+      "examples": [
+        "Weihnachten und das Opferfest betonen die Bindung an Gott und die Gemeinschaft.",
+        "Fasten im Ramadan und in der christlichen Fastenzeit."
+      ]
+    }
+  ],
+  "formats": [
+    "Text",
+    "Präsentation"
+  ],
+  "adjustments": [
+    "Verwende formalen Ton",
+    "Gib Beispiele aus der Praxis"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "roles": [
+    "Social-Media-Manager*in für religiöse Organisationen",
+    "Webdesigner*in für religiöse Bildung",
+    "Kampagnenleiter*in für interreligiösen Dialog",
+    "Pädagog*in für religiöse Symbole",
+    "Religionslehrer*in"
+  ],
+  "targets": [
+    "Kinder",
+    "Jugendliche",
+    "Erwachsene"
+  ],
+  "tasks": [
+    {
+      "name": "Social-Media-Strategie für religiöse Feiertage erstellen",
+      "criteria": [],
+      "examples": []
+    },
+    {
+      "name": "Interaktive Webseite über religiöse Feiertage erstellen",
+      "criteria": [],
+      "examples": []
+    },
+    {
+      "name": "Social-Media-Kampagne für interreligiöse Feiertage entwickeln",
+      "criteria": [],
+      "examples": []
+    },
+    {
+      "name": "Lernspiel über religiöse Symbole entwerfen",
+      "criteria": [],
+      "examples": []
+    },
+    {
+      "name": "Unterrichtsreihe über religiöse Symbole erstellen",
+      "criteria": [],
+      "examples": []
+    }
+  ],
+  "formats": [
+    "Social-Media-Post-Serie",
+    "Webseite",
+    "Bulletpoints oder Plakat",
+    "Lernspiel (analog/digital)",
+    "Diagramm"
+  ],
+  "adjustments": [
+    "Verwende eine religiös inklusive Sprache",
+    "Achte auf Respekt und Sensibilität gegenüber Glaubensfragen",
+    "Vermeide Fachbegriffe oder erkläre sie einfach",
+    "Verwende alltagsnahe Beispiele und Begriffe",
+    "Rege zu ethischem und philosophischem Nachdenken an"
+  ]
+}
